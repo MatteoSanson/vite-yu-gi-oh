@@ -1,22 +1,23 @@
 <script>
 export default {
     name: 'SingleCard',
+    props: ['name', 'type', 'image'],
 }
 </script>
 
 <template>
     <div class="card">
         <div class="immagine">
-            <img src="https://images.ygoprodeck.com/images/cards_small/34541863.jpg" alt="">
+            <img :src="image" :alt="name">
         </div>
         <div class="title">
             <h3>
-                titolo
+                {{ name }}
             </h3>
         </div>
         <div class="type">
             <p>
-                tipo
+                {{ type }}
             </p>
         </div>
     </div>
