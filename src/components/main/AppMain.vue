@@ -18,4 +18,8 @@ export default {
     </main>
 </template>
 
-<style></style>
+<style scoped lang="scss">
+main {
+    background-color: #d48f38;
+}
+</style>

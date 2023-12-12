@@ -18,4 +18,8 @@ export default {
     </header>
 </template>
 
-<style></style>
+<style scoped lang="scss">
+header {
+    display: flex;
+}
+</style>

@@ -5,7 +5,16 @@ export default {
 </script>
 
 <template>
-    <div>Yu-Gi-Oh Api</div>
+    <div class="title">
+        <h2>
+            Yu-Gi-Oh Api
+        </h2>
+    </div>
 </template>
 
-<style></style>
+<style scoped lang="scss">
+.title {
+    display: flex;
+    align-items: center;
+}
+</style>
