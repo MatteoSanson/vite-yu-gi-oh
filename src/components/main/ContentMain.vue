@@ -12,11 +12,18 @@ export default {
 </script>
 
 <template>
-    <div>
+    <div class="content">
         <FoundedCards />
         <CardList />
-
     </div>
 </template>
 
-<style></style>
+<style scoped lang="scss">
+@use '../../assets/scss/partials/variables.scss' as *;
+
+.content {
+    width: 100%;
+    background-color: $primary-color;
+    padding: 25px;
+}
+</style>
