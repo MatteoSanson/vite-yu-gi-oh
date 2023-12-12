@@ -13,13 +13,20 @@ export default {
 
 <template>
     <main>
-        <SelectType />
-        <ContentMain />
+        <div class="container">
+            <SelectType />
+            <ContentMain />
+        </div>
     </main>
 </template>
 
 <style scoped lang="scss">
 main {
     background-color: #d48f38;
+
+    .container {
+        width: 85%;
+        margin: 0 auto;
+    }
 }
 </style>
