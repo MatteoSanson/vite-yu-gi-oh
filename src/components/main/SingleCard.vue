@@ -10,10 +10,14 @@ export default {
             <img src="https://images.ygoprodeck.com/images/cards_small/34541863.jpg" alt="">
         </div>
         <div class="title">
-            titolo
+            <h3>
+                titolo
+            </h3>
         </div>
         <div class="type">
-            tipo
+            <p>
+                tipo
+            </p>
         </div>
     </div>
 </template>
