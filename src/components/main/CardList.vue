@@ -16,16 +16,21 @@ export default {
     created() {
         axios.get(this.apiURL).then((response) => {
             this.cards = response.data.data;
-            console.log(response.data);
         });
     }
 }
 </script>
 
 <template>
-    <div>
+    <div class="container">
         <SingleCard v-for="card in cards" />
     </div>
 </template>
 
-<style></style>
+<style scoped lang="scss">
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+</style>

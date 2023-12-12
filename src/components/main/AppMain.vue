@@ -21,8 +21,10 @@ export default {
 </template>
 
 <style scoped lang="scss">
+@use '../../../src/assets/scss/partials/variables.scss' as *;
+
 main {
-    background-color: #d48f38;
+    background-color: $bg-main-color;
 
     .container {
         width: 85%;
