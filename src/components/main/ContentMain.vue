@@ -20,7 +20,7 @@ export default {
 
 <template>
     <div class="content">
-        <FoundedCards :cards="store.length" />
+        <FoundedCards :cards="store.cards.length" />
         <CardList :cards="store.cards" />
     </div>
 </template>

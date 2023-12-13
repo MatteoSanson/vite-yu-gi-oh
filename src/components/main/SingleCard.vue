@@ -2,7 +2,7 @@
 import { store } from '../../store';
 export default {
     name: 'SingleCard',
-    props: ['name', 'type', 'image', 'cards'],
+    props: ['name', 'type', 'image'],
     data() {
         return {
             store,
@@ -50,6 +50,14 @@ export default {
 
     .title {
         color: $primary-color;
+    }
+
+    .title {
+        margin: 15px 0;
+    }
+
+    .type {
+        margin: 5px 0;
     }
 }
 </style>

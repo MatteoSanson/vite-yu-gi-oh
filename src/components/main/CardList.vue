@@ -8,7 +8,7 @@ export default {
     components: {
         SingleCard,
     },
-    props: ['cards'],
+    // props: ['cards'],
     data() {
         return {
             store,
@@ -20,8 +20,8 @@ export default {
 
 <template>
     <div class="container">
-        <SingleCard v-for="card in cards" :name="card.name" :type="card.archetype" :image="card.card_images[0].image_url"
-            :cards="store.cards" />
+        <SingleCard v-for="card in store.cards" :name="card.name" :type="card.archetype"
+            :image="card.card_images[0].image_url" :cards="store.cards" />
     </div>
 </template>
 
