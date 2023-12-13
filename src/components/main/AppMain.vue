@@ -17,8 +17,9 @@ export default {
         }
     },
     created() {
-        axios.get(store.apiURL).then((response) => {
+        axios.get(store.apiURL.defaultURL + store.apiURL.cardsURL).then((response) => {
             store.cards = response.data.data;
+            console.log(store.cards);
         });
     },
 }

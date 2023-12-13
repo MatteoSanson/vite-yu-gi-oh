@@ -1,16 +1,30 @@
 <script>
+import axios from 'axios';
+import { store } from '../../store';
+
 export default {
     name: 'SelectType',
+    data() {
+        return {
+            store,
+        }
+    },
+    created() {
+        axios.get(store.apiURL.defaultURL + store.apiURL.archURL).then((response) => {
+            store.archs = response.data;
+            console.log(store.archs);
+        });
+    },
 }
 </script>
 
 <template>
     <div class="selection">
         <select id="selezione" name="selezione">
-            <option value="" disabled selected>Seleziona un'opzione</option>
-            <option value="opzione1">Opzione 1</option>
-            <option value="opzione2">Opzione 2</option>
-            <option value="opzione3">Opzione 3</option>
+            <option value="" selected>Seleziona un'opzione</option>
+            <option v-for="(arch, index) in store.archs" :value="arch.archetype_name">
+                {{ arch.archetype_name }}
+            </option>
         </select>
     </div>
 </template>
