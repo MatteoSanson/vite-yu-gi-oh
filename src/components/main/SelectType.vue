@@ -7,6 +7,7 @@ export default {
     data() {
         return {
             store,
+            searchType: '',
         }
     },
     created() {
@@ -20,7 +21,7 @@ export default {
 
 <template>
     <div class="selection">
-        <select id="selezione" name="selezione">
+        <select id="selezione" name="selezione" v-model="searchType">
             <option value="" selected>Seleziona un'opzione</option>
             <option v-for="(arch, index) in store.archs" :value="arch.archetype_name">
                 {{ arch.archetype_name }}
