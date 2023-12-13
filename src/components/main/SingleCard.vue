@@ -1,7 +1,13 @@
 <script>
+import { store } from '../../store';
 export default {
     name: 'SingleCard',
-    props: ['name', 'type', 'image'],
+    props: ['name', 'type', 'image', 'cards'],
+    data() {
+        return {
+            store,
+        }
+    },
 }
 </script>
 

@@ -2,20 +2,33 @@
 import SelectType from './SelectType.vue';
 import ContentMain from './ContentMain.vue';
 
+import axios from 'axios';
+import { store } from '../../store';
+
 export default {
     name: 'AppMain',
     components: {
         SelectType,
         ContentMain,
-    }
+    },
+    data() {
+        return {
+            store,
+        }
+    },
+    created() {
+        axios.get(store.apiURL).then((response) => {
+            store.cards = response.data.data;
+        });
+    },
 }
 </script>
 
 <template>
     <main>
         <div class="container">
-            <SelectType />
-            <ContentMain />
+            <SelectType :cards="store.cards" />
+            <ContentMain :cards="store.cards" />
         </div>
     </main>
 </template>

@@ -1,30 +1,27 @@
 <script>
-import axios from 'axios';
+
 import SingleCard from './SingleCard.vue';
+import { store } from '../../store';
 
 export default {
     name: 'CardList',
     components: {
         SingleCard,
     },
+    props: ['cards'],
     data() {
         return {
-            cards: [],
-            apiURL: 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0',
+            store,
         }
     },
-    created() {
-        axios.get(this.apiURL).then((response) => {
-            this.cards = response.data.data;
-        });
-    }
+
 }
 </script>
 
 <template>
     <div class="container">
-        <SingleCard v-for="card in  cards" :name="card.name" :type="card.archetype"
-            :image="card.card_images[0].image_url" />
+        <SingleCard v-for="card in cards" :name="card.name" :type="card.archetype" :image="card.card_images[0].image_url"
+            :cards="store.cards" />
     </div>
 </template>
 

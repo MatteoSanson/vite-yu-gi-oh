@@ -1,13 +1,21 @@
 <script>
+import { store } from '../../store';
+
 export default {
     name: 'FoundedCard',
+    // props: ['found'],
+    data() {
+        return {
+            store,
+        }
+    },
 }
 </script>
 
 <template>
     <div class="founded">
         <h4>
-            Found 39 cards
+            Found {{ store.cards.length }} cards
         </h4>
     </div>
 </template>
